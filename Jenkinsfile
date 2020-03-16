@@ -6,15 +6,15 @@ pipeline {
         sh './mvnw install'    
         }
     }  
-                stage('Test'){
+        stage('Test'){
         steps{
         sh './mvnw test'    
         }
     }  
-        stage('Test')
+        stage('Package')
             {
         steps{
-        sh './mvnw test'    
+        sh './mvnw package'    
         }
     }   
     stage('Deploy') {
